@@ -22,6 +22,9 @@ int	str_size_ll(char *str, int size, int neg, long long int *nba)
 	{
 		nb = (nb * 10) + (str[size] - 48);
 		size++;
+		if ((nb * neg) > 2147483647 || (nb * neg) < -2147483648)
+			return (-1);
+
 	}
 	*nba = nb * neg;
 	if ((nb * neg) > 2147483647 || (nb * neg) < -2147483648)
