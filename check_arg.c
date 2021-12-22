@@ -17,7 +17,7 @@ int	check_arg(int c, char **v, int x)
 	int	nb;
 
 	nb = 0;
-	if (c > 2)
+	if (c > 2 || c == 1)
 		return (-1);
 	if (v[1][x] != '-' && v[1][x] != '+' && (v[1][x] < '0' || v[1][x] > '9'))
 		return (-1);
