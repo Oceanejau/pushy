@@ -10,6 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "push_swap.h"
+#include <stdio.h>
 
 int	main(int argc, char **argv)
 {
@@ -35,6 +36,8 @@ int	main(int argc, char **argv)
 
 	fat_lita(&*tab, &swap);
 	swap.oka = ordr_a(tab, &swap);
+	if (swap.sizea == 2 && tab[0][0] > tab[0][1])
+		do_sa(&*tab, &swap);
 	if (swap.sizea == 3)
 		trois_a(&*tab, &swap);
 	if (swap.sizeb == 3)
@@ -43,13 +46,13 @@ int	main(int argc, char **argv)
 	{
 		cinq(&*tab, &swap);	
 	}
-	if (swap.sizea > 5)
+	else if (swap.sizea > 5 || swap.sizea == 4)
 		more(&*tab, &swap);
 	swap.oka = ordr_a(tab, &swap);
 	swap.okb = ordr_b(tab, &swap);
 
 
-	/*show tab
+/*	show tab*/
 	int sizee;
 	sizee = 0;
     while (swap.size != sizee)
@@ -57,7 +60,7 @@ int	main(int argc, char **argv)
             printf("%lld |  %lld \n", tab[0][sizee], tab[1][sizee]);
             sizee++;
     }
-	show tab*/
+/*	show tab*/
 	if (swap.ret_fl == -1 || swap.ret_dbl == -1 || swap.ret == -1)
 		return (err(tab));
 	return (0);
