@@ -1,5 +1,7 @@
 #include "push_swap.h"
 
+//#include "push_swap.h"
+
 int	where(long long int **tab, t_pushy *swap)
 {
 	int x;
@@ -22,6 +24,39 @@ int	where(long long int **tab, t_pushy *swap)
 		return (1);
 	return (0);
 }
+/*
+0 = va tout en haut de la pile;
+positif = va à tant de distance en partant du bas
+negatif = va a tant de distance en partant du haut
+*/
+/*int	where(long long int **tab, t_pushy *swap)
+{
+	int x;
+	int y;
+	int z;
+
+	x = swap->size - swap->sizea;
+	y = 0;
+	while (x + y < swap->size)
+	{
+		if (tab[0][x + y] > tab[1][swap->size - swap->sizeb] && tab[0][x + y] < tab[0][x + z])
+		{
+			z = y;*/
+			/*if (y <= swap->sizea / 2)
+				return (y * -1);
+			if (y > swap->sizea / 2)
+				return (swap->sizea - y + 1);*/
+	/*	}
+		y++;
+	}
+	if (z <= swap->sizea / 2)
+		return (z * -1);
+	if (z > swap->sizea / 2)
+		return (swap->sizea - z + 1);
+	if (swap->fat_a < tab[1][swap->size - swap->sizeb])
+		return (1);
+	return (0);
+}*/
 /*
 0 = va tout en haut de la pile;
 positif = va à tant de distance en partant du bas

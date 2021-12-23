@@ -30,6 +30,7 @@ SRCS = push_swap.c\
 			where.c\
 			pos.c\
 			more.c\
+			noyau.c\
 			fat_lit.c\
 			str_size_ll.c\
 			main.c\

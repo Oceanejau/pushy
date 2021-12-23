@@ -46,13 +46,19 @@ int	main(int argc, char **argv)
 	{
 		cinq(&*tab, &swap);	
 	}
+/*
+	pour plus de 5, on parcours tout A et on localise le noyau trié, on vide a du haut et du bas de ce noyau dans B
+	on tri b au fur et a mesure ( soit on injecte dans b soit on injecte dans a en calculant le nb de coups de différence pour chaque mvment
+	si un mouvement sur a et b se vuit on fait un double.
+
+*/
 	else if (swap.sizea > 5 || swap.sizea == 4)
 		more(&*tab, &swap);
 	swap.oka = ordr_a(tab, &swap);
 	swap.okb = ordr_b(tab, &swap);
 
 
-/*	show tab*/
+//	show tab
 	int sizee;
 	sizee = 0;
     while (swap.size != sizee)
@@ -60,7 +66,7 @@ int	main(int argc, char **argv)
             printf("%lld |  %lld \n", tab[0][sizee], tab[1][sizee]);
             sizee++;
     }
-/*	show tab*/
+//	show tab
 	if (swap.ret_fl == -1 || swap.ret_dbl == -1 || swap.ret == -1)
 		return (err(tab));
 	return (0);

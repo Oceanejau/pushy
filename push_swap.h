@@ -21,7 +21,9 @@ typedef struct		s_pushy
 	int			lit_a;
 	int			lit_b;
 	int			fat_a;
-	int			fat_b;	
+	int			fat_b;
+	int			nut_x;
+	int			nut_size;	
 }					t_pushy;
 
 int		check_arg(int c, char **v, int x);
@@ -31,6 +33,7 @@ int		cinq(long long int **tab, t_pushy *swap);
 int		where(long long int **tab, t_pushy *swap);
 int		pos(long long int **tab, t_pushy *swap);
 int		more(long long int **tab, t_pushy *swap);
+int		noyau(long long int **tab, t_pushy *swap);
 
 void		fat_lita(long long int **tab, t_pushy *swap);
 void		fat_litb(long long int **tab, t_pushy *swap);
