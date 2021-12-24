@@ -20,6 +20,7 @@ int	where(long long int **tab, t_pushy *swap)
 		}
 		y++;
 	}
+	fat_lita(&*tab, &*swap);
 	if (swap->fat_a < tab[1][swap->size - swap->sizeb])
 		return (1);
 	return (0);

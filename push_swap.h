@@ -35,6 +35,9 @@ int		pos(long long int **tab, t_pushy *swap);
 int		more(long long int **tab, t_pushy *swap);
 int		noyau(long long int **tab, t_pushy *swap);
 
+
+void		showtab(long long int **tab, t_pushy *swap);
+
 void		fat_lita(long long int **tab, t_pushy *swap);
 void		fat_litb(long long int **tab, t_pushy *swap);
 

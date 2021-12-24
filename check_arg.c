@@ -21,6 +21,8 @@ int	check_arg(int c, char **v, int x)
 		return (-1);
 	if (v[1][x] != '-' && v[1][x] != '+' && (v[1][x] < '0' || v[1][x] > '9'))
 		return (-1);
+	if ((v[1][x] == '-' || v[1][x] == '+') && (v[1][x + 1] < '0' && v[1][x + 1] > '9'))
+		return (-1);
 	while (v[1][x] != '\0')
 	{
 		if (v[1][x] == ' ')

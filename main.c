@@ -12,6 +12,19 @@
 #include "push_swap.h"
 #include <stdio.h>
 
+void	showtab(long long int **tab, t_pushy *swap)
+{
+	int sizee;
+        sizee = 0;
+	printf("TAB =============\n");
+    while (swap->size != sizee)
+    {
+            printf("%lld |  %lld \n", tab[0][sizee], tab[1][sizee]);
+            sizee++;
+    }
+	printf("\n");
+	return ;
+}
 int	main(int argc, char **argv)
 {
 	int				x;
@@ -57,15 +70,15 @@ int	main(int argc, char **argv)
 	swap.oka = ordr_a(tab, &swap);
 	swap.okb = ordr_b(tab, &swap);
 
-
+//	showtab(&*tab, &swap);
 //	show tab
-	int sizee;
+/*	int sizee;
 	sizee = 0;
     while (swap.size != sizee)
     {
             printf("%lld |  %lld \n", tab[0][sizee], tab[1][sizee]);
             sizee++;
-    }
+    }*/
 //	show tab
 	if (swap.ret_fl == -1 || swap.ret_dbl == -1 || swap.ret == -1)
 		return (err(tab));

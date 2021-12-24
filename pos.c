@@ -34,5 +34,7 @@ int	pos(long long int **tab, t_pushy *swap)
 	}
         else if (pos == 0)
                 do_pb(&*tab, &*swap);
+
+//	showtab(&*tab, &*swap);
 	return (0);
 }
