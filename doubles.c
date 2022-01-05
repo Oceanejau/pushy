@@ -12,7 +12,7 @@
 
 #include "push_swap.h"
 
-int	doubles(long long int **tab, int size)
+int	doubles(int **tab, int size)
 {
 	int	x;
 	int	y;

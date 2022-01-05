@@ -12,7 +12,7 @@
 
 #include "push_swap.h"
 
-int	err(long long int **tab)
+int	err(int **tab)
 {
 	write(2, "Error\n", 6);
 	free(tab[0]);

@@ -1,6 +1,6 @@
 #include "push_swap.h"
 
-int	trois_a(long long int **tab, t_pushy *swap)
+int	trois_a(int **tab, t_pushy *swap)
 {
 	fat_lita(&*tab, &*swap);
 	if (swap->fat_a == swap->size - 1 && swap->lit_a == swap->size - (swap->sizea - 1))
@@ -26,7 +26,7 @@ int	trois_a(long long int **tab, t_pushy *swap)
 //swap->size - swap->sizeb == prermier chiffre
 //swap->size - (swap->sizea - 1) deuxieme chiffre
 
-int	trois_b(long long int **tab, t_pushy *swap)
+int	trois_b(int **tab, t_pushy *swap)
 {
 	fat_litb(&*tab, &*swap);
 	if (swap->fat_b == swap->size - 1 && swap->lit_b == swap->size - (swap->sizeb - 1))

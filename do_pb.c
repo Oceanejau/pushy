@@ -11,9 +11,9 @@
 /* ************************************************************************** */
 #include "push_swap.h"
 
-void	do_pb(long long int **tab, t_pushy *swap)
+void	do_pb(int **tab, t_pushy *swap)
 {
-	long long int	nb;
+	int	nb;
 
 	nb = tab[0][swap->size - swap->sizea - 1];
 	tab[0][swap->size - swap->sizea - 1] = tab[1][swap->size - swap->sizeb];

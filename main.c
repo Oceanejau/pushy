@@ -12,14 +12,14 @@
 #include "push_swap.h"
 #include <stdio.h>
 
-void	showtab(long long int **tab, t_pushy *swap)
+void	showtab(int **tab, t_pushy *swap)
 {
 	int sizee;
         sizee = 0;
 	printf("TAB =============\n");
     while (swap->size != sizee)
     {
-            printf("%lld |  %lld \n", tab[0][sizee], tab[1][sizee]);
+            printf("%d |  %d \n", tab[0][sizee], tab[1][sizee]);
             sizee++;
     }
 	printf("\n");
@@ -32,17 +32,28 @@ int	main(int argc, char **argv)
 	x = 0;
 	t_pushy	swap;
 	swap.size = 0;
-	swap.size = check_arg(argc, argv, x);
-	long long int	*tab[2];
+	if (argc == 1)
+		swap.ret = -1;
+	swap.size = argc - 1;
+	
+
+//check_arg(argc, argv, x);
+
+	while (x < argc)//////////////
+	{
+		printf("%s %d\n", argv[x], argc);
+		x++;
+	}/////
+	int	*tab[2];
 
 	tab[1] = NULL;
-    tab[0] = (long long *)malloc(sizeof(long long) * (swap.size + 2));
+    tab[0] = (int *)malloc(sizeof(int) * (swap.size + 2));
 	if (tab[0] == NULL || swap.size < 0)
-        return (err(tab));
-    tab[1] = (long long *)malloc(sizeof(long long) * (swap.size + 2));
+ 	       return (err(tab));
+    tab[1] = (int *)malloc(sizeof(int) * (swap.size + 2));
 	if (tab[1] == NULL)
-        return (err(tab));
-    swap.ret_fl = fill_tab(argv[1], &*tab); 
+ 	       return (err(tab));
+    swap.ret_fl = fill_tab(argv, &*tab, &swap); 
 	swap.sizea = swap.size;
 	swap.sizeb = 0;
 	swap.ret_dbl = doubles(tab, swap.size);
@@ -70,7 +81,7 @@ int	main(int argc, char **argv)
 	swap.oka = ordr_a(tab, &swap);
 	swap.okb = ordr_b(tab, &swap);
 
-//	showtab(&*tab, &swap);
+	showtab(&*tab, &swap);
 //	show tab
 /*	int sizee;
 	sizee = 0;
@@ -80,6 +91,7 @@ int	main(int argc, char **argv)
             sizee++;
     }*/
 //	show tab
+	printf("fl = %d dbl = %d ret = %d\n", swap.ret_fl, swap.ret_dbl, swap.ret);
 	if (swap.ret_fl == -1 || swap.ret_dbl == -1 || swap.ret == -1)
 		return (err(tab));
 	return (0);

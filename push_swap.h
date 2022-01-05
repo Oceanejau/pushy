@@ -26,45 +26,46 @@ typedef struct		s_pushy
 	int			nut_size;	
 }					t_pushy;
 
-int		check_arg(int c, char **v, int x);
-int		trois_a(long long int **tab, t_pushy *swap);
-int		trois_b(long long int **tab, t_pushy *swap);
-int		cinq(long long int **tab, t_pushy *swap);
-int		where(long long int **tab, t_pushy *swap);
-int		pos(long long int **tab, t_pushy *swap);
-int		more(long long int **tab, t_pushy *swap);
-int		noyau(long long int **tab, t_pushy *swap);
+int		check_arg(char **v, int y);
+int		trois_a(int **tab, t_pushy *swap);
+int		trois_b(int **tab, t_pushy *swap);
+int		cinq(int **tab, t_pushy *swap);
+int		where(int **tab, t_pushy *swap, int nb);
+int		pre_pos(int **tab, t_pushy *swap);
+int		pos(int **tab, t_pushy *swap, int pos);
+int		more(int **tab, t_pushy *swap);
+int		noyau(int **tab, t_pushy *swap);
+int		ft_atoi(const char *str);
 
+void		showtab(int **tab, t_pushy *swap);
 
-void		showtab(long long int **tab, t_pushy *swap);
+void		fat_lita(int **tab, t_pushy *swap);
+void		fat_litb(int **tab, t_pushy *swap);
 
-void		fat_lita(long long int **tab, t_pushy *swap);
-void		fat_litb(long long int **tab, t_pushy *swap);
-
-int		doubles(long long int **tab, int size);
-int		fill_tab(char *AB, long long int **tab);
+int		doubles(int **tab, int size);
+int		fill_tab(char **AB, int **tab, t_pushy *swap);
 int		main(int argc, char **argv);
-int		str_size_ll(char *str,int size, int neg,long long int *nba);
+int		str_size_ll(char *str,int size, int neg,int *nba);
 
 
-int		err(long long int **tab);
-int		ordr_a(long long int **tab, t_pushy *swap);
-int		ordr_b(long long int **tab, t_pushy *swap);
-int		ordr_ab(long long int **tab, t_pushy *swap);
+int		err(int **tab);
+int		ordr_a(int **tab, t_pushy *swap);
+int		ordr_b(int **tab, t_pushy *swap);
+int		ordr_ab(int **tab, t_pushy *swap);
 
-void	do_pa(long long int **tab, t_pushy *swap);
-void	do_pb(long long int **tab, t_pushy *swap);
+void	do_pa(int **tab, t_pushy *swap);
+void	do_pb(int **tab, t_pushy *swap);
 
-void	do_sa(long long int **tab, t_pushy *swap);
-void	do_sb(long long int **tab, t_pushy *swap);
-void	do_ss(long long int **tab, t_pushy *swap);
+void	do_sa(int **tab, t_pushy *swap);
+void	do_sb(int **tab, t_pushy *swap);
+void	do_ss(int **tab, t_pushy *swap);
 
-void	do_ra(long long int **tab, t_pushy *swap);
-void	do_rb(long long int **tab, t_pushy *swap);
-void	do_rr(long long int **tab, t_pushy *swap);
+void	do_ra(int **tab, t_pushy *swap);
+void	do_rb(int **tab, t_pushy *swap);
+void	do_rr(int **tab, t_pushy *swap);
 
-void	do_rra(long long int **tab, t_pushy *swap);
-void	do_rrb(long long int **tab, t_pushy *swap);
-void	do_rrr(long long int **tab, t_pushy *swap);
+void	do_rra(int **tab, t_pushy *swap);
+void	do_rrb(int **tab, t_pushy *swap);
+void	do_rrr(int **tab, t_pushy *swap);
 
 #endif

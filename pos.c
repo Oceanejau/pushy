@@ -1,12 +1,9 @@
 #include "push_swap.h"
 
-int	pos(long long int **tab, t_pushy *swap)
+int	pos(int **tab, t_pushy *swap, int pos)
 {
-	int pos;
         int re;
 
-
-	pos = where(&*tab, &*swap);
         if (pos >  1)
         {
                 re = pos;
@@ -34,7 +31,6 @@ int	pos(long long int **tab, t_pushy *swap)
 	}
         else if (pos == 0)
                 do_pb(&*tab, &*swap);
-
-//	showtab(&*tab, &*swap);
+	showtab(&*tab, &*swap);
 	return (0);
 }

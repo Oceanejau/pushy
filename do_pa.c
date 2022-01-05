@@ -12,9 +12,9 @@
 
 #include "push_swap.h"
 
-void	do_pa(long long int **tab, t_pushy *swap)
+void	do_pa(int **tab, t_pushy *swap)
 {
-	long long int	nb;
+	int	nb;
 
 	nb = tab[1][swap->size - swap->sizeb - 1];
 	tab[1][swap->size - swap->sizeb - 1] = tab[0][swap->size - swap->sizea];

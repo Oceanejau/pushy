@@ -11,9 +11,9 @@
 /* ************************************************************************** */
 #include "push_swap.h"
 
-void	do_rr(long long int **tab, t_pushy *swap)
+void	do_rr(int **tab, t_pushy *swap)
 {
-	long long int	nb;
+	int	nb;
 	int				x;
 
 	x = swap->size - swap->sizea;

@@ -1,0 +1,36 @@
+comparer nb de mouvement pour ranger:
+le premier chiffre de la colonne B,
+le deuxieme chiffre de la colonne B,
+le dernier chiffre de B.
+
+A tourne pour caser tous les chiffres, on ne range A que quand B est vide
+
+
+prend en param sans guillements
+
+n'envoyer que le dessus du noyau trié
+
+where > 1
+pos + 1
+
+where < 0
+pos + 1
+
+where == 1
+2
+
+where == 0
+1
+
+where  == -1
+2
+
+dex et der = + 1 (sb et rrb)
+
+if pos == -1 pb sa
+priorités: 
+PRE
+== 0
+== 1
+== -1
+if ()

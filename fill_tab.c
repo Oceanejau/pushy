@@ -10,31 +10,26 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "push_swap.h"
-
-int	fill_tab(char *AB, long long int**tab)
+#include <stdio.h>//////////
+int	fill_tab(char **AB, int **tab, t_pushy *swap)
 {
-	int	size;
-	int	neg;
+	int	ret;
 	int	nb;
 
-	size = 0;
 	nb = 0;
-	while (AB[size] != '\0' && size != -1)
+	while (nb + 1 <= swap->size)
 	{
-		neg = 1;
-		if (AB[size] == '-' || AB[size] == '+')
-		{
-			if (AB[size] == '-')
-				neg = neg * -1;
-			size++;
-		}
-		size = str_size_ll(AB, size, neg, &tab[0][nb]);
-		tab[1][nb] = 0;
+	printf("entre\n");
+		ret = check_arg(&*AB, nb + 1);
+		if (ret == -1)
+			return (ret);
+printf("sort\n");
+		tab[1][nb] = ft_atoi(AB[nb]);
+printf("ici %d\n", tab[1][nb]);
 		nb++;
-		if (AB[size] != ' ' && AB[size] != '\0')
-			size = -1;
-		if (AB[size] == ' ')
-			size++;
 	}
-	return (size);
+	swap->sizea = swap->size;
+	swap->sizeb = 0;
+printf("fin filltab\n");
+	return (ret);
 }

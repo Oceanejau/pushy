@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 #include "push_swap.h"
 
-int	str_size_ll(char *str, int size, int neg, long long int *nba)
+int	str_size_ll(char *str, int size, int neg, int *nba)
 {
 	long long int	nb;
 

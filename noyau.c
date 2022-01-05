@@ -1,11 +1,11 @@
 #include "push_swap.h"
 #include <stdio.h>/////
-int	noyau(long long int **tab, t_pushy *swap)
+int	noyau(int **tab, t_pushy *swap)
 {
-	long long int x;
+	int x;
 	int pos;
 	
-	x = 0;
+	x = 1;
 	pos = 0;
 //	printf("heelloo\n");
 	swap->nut_size = 0;
@@ -13,21 +13,20 @@ int	noyau(long long int **tab, t_pushy *swap)
 	while (x < swap->size)
 	{
 	//	printf("x= %lld, %d\n", x, swap->sizea);
-		if (tab[0][x] < tab[0][x + 1])
-			pos = x;
-		while (tab[0][x] < tab[0][x + 1] && x < swap->size)
+		if (tab[0][x - 1] < tab[0][x])
+			pos = x - 1;
+		while (tab[0][x - 1] < tab[0][x] && x <= swap->size)
 			x++;
 		if (x - pos + 1 > swap->nut_size/* && swap->nut_x != pos*/)
 		{
 		
 			swap->nut_x = pos;
-			swap->nut_size = x - pos + 1;
-
-	//	printf("x= %lld, %d, %d\n", x, swap->nut_size, pos);
+			swap->nut_size = x - pos;
+	//	printf("passe %lld, %d, %d\n", x, swap->nut_size, pos);
 		}
-		if (tab[0][x] > tab[0][x + 1])
+		if (tab[0][x - 1] > tab[0][x])
 			x++;	
-	//	printf("x= %lld, %d, %d\n", x, swap->nut_size, pos);
+	//	printf("x= %lld, %d, %d, %d\n", x, swap->nut_size, pos, swap->size);
 	//	x++;
 	}
 //position

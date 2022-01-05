@@ -12,33 +12,21 @@
 
 #include "push_swap.h"
 
-int	check_arg(int c, char **v, int x)
+int	check_arg(char **v, int y)
 {
-	int	nb;
-
-	nb = 0;
-	if (c > 2 || c == 1)
-		return (-1);
-	if (v[1][x] != '-' && v[1][x] != '+' && (v[1][x] < '0' || v[1][x] > '9'))
-		return (-1);
-	if ((v[1][x] == '-' || v[1][x] == '+') && (v[1][x + 1] < '0' && v[1][x + 1] > '9'))
-		return (-1);
-	while (v[1][x] != '\0')
+	int	x;
+	int	ret;
+	
+	x = 0;
+	ret = 0;
+	if (v[y][x] != '-' && v[y][x] != '+')
+		x++;
+	while (v[y][x] != '\0' && ret != -1)
 	{
-		if (v[1][x] == ' ')
-			x++;
-		if ((v[1][x] == '-' || v[1][x] == '+') && (v[1][x + 1] >= '0' &&
-					v[1][x + 1] <= '9'))
-			x++;
-		if (v[1][x] >= '0' && v[1][x] <= '9')
-		{
-			while (v[1][x] >= '0' && v[1][x] <= '9')
+		while (v[y][x] >= '0' && v[y][x] <= '9')
 				x++;
-			nb++;
-		}
-		if ((v[1][x] != ' ' && v[1][x] != '\0') || (v[1][x] == ' ' &&
-					(v[1][x + 1] == ' ' || v[1][x + 1] == '\0')))
-			return (-1);
+		if (v[y][x] <= '0' || v[y][x] >= '9')
+			ret = -1;
 	}
-	return (nb);
+	return (ret);
 }

@@ -12,9 +12,9 @@
 
 #include "push_swap.h"
 
-void	do_sb(long long int **tab, t_pushy *swap)
+void	do_sb(int **tab, t_pushy *swap)
 {
-	long long int	nb;
+	int	nb;
 
 	if (swap->sizeb > 1)
 	{

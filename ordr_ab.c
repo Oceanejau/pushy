@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 #include "push_swap.h"
 
-int	ordr_ab(long long int **tab, t_pushy *swap)
+int	ordr_ab(int **tab, t_pushy *swap)
 {
 	int	x;
 

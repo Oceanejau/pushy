@@ -1,6 +1,6 @@
 #include "push_swap.c"
 
-void	fat_lita(long long int **tab, t_pushy *swap)
+void	fat_lita(int **tab, t_pushy *swap)
 {
 	int	x;
 	x = swap->size - swap->sizea;
@@ -18,7 +18,7 @@ void	fat_lita(long long int **tab, t_pushy *swap)
 }
 
 
-void	fat_litb(long long int **tab, t_pushy *swap)
+void	fat_litb(int **tab, t_pushy *swap)
 {
 	int	x;
 	x = swap->size - swap->sizeb;

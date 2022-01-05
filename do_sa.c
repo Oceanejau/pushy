@@ -11,9 +11,9 @@
 /* ************************************************************************** */
 #include "push_swap.h"
 
-void	do_sa(long long int **tab, t_pushy *swap)
+void	do_sa(int **tab, t_pushy *swap)
 {
-	long long int	nb;
+	int	nb;
 
 	if (swap->sizea > 1)
 	{

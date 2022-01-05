@@ -28,9 +28,11 @@ SRCS = push_swap.c\
 			trois.c\
 			cinq.c\
 			where.c\
+			pre_pos.c\
 			pos.c\
 			more.c\
 			noyau.c\
+			ft_atoi.c\
 			fat_lit.c\
 			str_size_ll.c\
 			main.c\
